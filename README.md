@@ -21,13 +21,17 @@ The repository includes the complete image-editing prompt in both Chinese and En
 
 以下原图均为本人拍摄。每张示例均为“原图在上、处理图在下”。
 
-| 脆皮五花肉拼盘 | 菠萝咕咾肉 |
+| 番茄鸡肉蛋锅 | 菠萝咕咾肉 |
 | --- | --- |
-| ![脆皮五花肉前后对照](assets/examples/crispy-pork-belly-before-after.jpg) | ![菠萝咕咾肉前后对照](assets/examples/sweet-sour-meatballs-before-after.jpg) |
+| ![番茄鸡肉蛋锅前后对照](assets/examples/tomato-chicken-egg-stew-before-after.jpg) | ![菠萝咕咾肉前后对照](assets/examples/pineapple-sweet-sour-meatballs-before-after.jpg) |
 
-| 鲫鱼煲仔饭 | 青柠香草烤鱼 |
+| 青柠香草烤鱼 | 脆皮五花肉拼盘 |
 | --- | --- |
-| ![鲫鱼煲仔饭前后对照](assets/examples/fish-claypot-rice-before-after.jpg) | ![青柠香草烤鱼前后对照](assets/examples/lime-herb-fish-before-after.jpg) |
+| ![青柠香草烤鱼前后对照](assets/examples/lime-herb-grilled-fish-before-after.jpg) | ![脆皮五花肉前后对照](assets/examples/crispy-pork-belly-platter-before-after.jpg) |
+
+| 丝瓜鸡肉 | 奶油蘑菇鸡 |
+| --- | --- |
+| ![丝瓜鸡肉前后对照](assets/examples/loofah-chicken-stew-before-after.jpg) | ![奶油蘑菇鸡前后对照](assets/examples/creamy-mushroom-chicken-before-after.jpg) |
 
 ## 使用方法
 
@@ -35,6 +39,12 @@ The repository includes the complete image-editing prompt in both Chinese and En
 
 ```text
 ~/.codex/skills/food-diary-sticker-editorial/
+```
+
+也可以直接安装：
+
+```bash
+npx skills add https://github.com/ItsZoeFox/food-diary-sticker-editorial
 ```
 
 开启一个新的 Codex 对话，上传一张食物照片，然后直接说：
@@ -91,7 +101,7 @@ food-diary-sticker-editorial/
 ├── scripts/
 │   └── compose_food_comparison.py
 └── assets/examples/
-    └── 4 张前后对照示例图
+    └── 6 张前后对照示例图
 ```
 
 `assets/examples` 只用来说明预期效果。除非用户上传的正是某张示例原图，否则不要把示例中的菜品、餐具、配色或构图复制到新的作品里。
