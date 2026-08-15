@@ -1,0 +1,97 @@
+# Food Diary Sticker Editorial 🍳
+
+把随手拍下的家常菜，认真地留成一张值得骄傲的美食日记。
+
+这是一个为 Codex 准备的食物图片编辑 Skill。它会保留真实菜品原本的形状、份量、位置、重叠与不完美，只把不合适的拍摄环境重新整理：清掉电脑、包装和桌面杂物，根据菜品选择更协调的餐具、桌面材质、配色与光线，再加上一枚能够概括这道菜特点的水彩或像素贴纸，以及少量从食物中提炼出的环绕线条。
+
+它不是一键滤镜，也不是把家常菜重画成广告样片。它更像一次温柔的“家庭餐桌美术指导”——即使拍照时光线一般、桌子有点乱、盘子不太搭，也依然能最大限度保留这顿饭真实的样子，同时让它显得更美味、更有趣、更值得记录。
+
+The repository includes the complete image-editing prompt in both Chinese and English.
+
+## 它会做什么
+
+- **食物纪实锁**：不擅自增减、移动、规整或重新摆盘，保留家里做出来的真实样子。
+- **按菜选场景**：不再把所有食物都放到木桌和粗麻布上；会在石材、釉面砖、漆面、玻璃、金属、细织物、竹席等背景中做食物导向的选择。
+- **按需更换餐具**：只有用户允许时才换盘、碗或锅，而且是让新餐具围着原菜生成，不让菜迁就盘子。
+- **克制地增加食欲**：统一光向、色温与阴影，轻微提升中间调和色彩，但拒绝 HDR、塑料油光与过度锐化。
+- **一枚菜品记忆贴纸**：默认使用干净水彩，也可切换为原创像素画；贴纸会突出这道菜最容易被认出的三到五个特征。
+- **可选前后对照图**：适合小红书等平台展示，原图在上、处理图在下，不添加多余标签。
+
+## 示例
+
+以下原图均为本人拍摄。每张示例均为“原图在上、处理图在下”。
+
+| 脆皮五花肉拼盘 | 菠萝咕咾肉 |
+| --- | --- |
+| ![脆皮五花肉前后对照](assets/examples/crispy-pork-belly-before-after.jpg) | ![菠萝咕咾肉前后对照](assets/examples/sweet-sour-meatballs-before-after.jpg) |
+
+| 鲫鱼煲仔饭 | 青柠香草烤鱼 |
+| --- | --- |
+| ![鲫鱼煲仔饭前后对照](assets/examples/fish-claypot-rice-before-after.jpg) | ![青柠香草烤鱼前后对照](assets/examples/lime-herb-fish-before-after.jpg) |
+
+## 使用方法
+
+将整个 `food-diary-sticker-editorial` 文件夹复制到你的 Codex skills 目录，例如：
+
+```text
+~/.codex/skills/food-diary-sticker-editorial/
+```
+
+开启一个新的 Codex 对话，上传一张食物照片，然后直接说：
+
+```text
+使用 food-diary-sticker-editorial 处理这张照片。
+```
+
+也可以把意图说得更具体：
+
+```text
+使用 food-diary-sticker-editorial 处理这张照片。保留菜本来的样子，去掉电脑和杂物，背景按这道菜来搭配；餐具可以更换。还需要一张上下前后对照图。
+```
+
+Skill 会先询问你是否需要前后对照版。默认设置是：
+
+- 只生成一张处理后的独立图片；
+- 成图与原图像素尺寸、比例和方向一致；
+- 使用一枚干净水彩贴纸；
+- 不更换餐具，除非你明确允许；
+- 不添加菜名、艺术字、箭头、Logo 或水印。
+
+## 你可以怎么调整
+
+- **餐具**：允许或禁止换盘；也可以指定材质、颜色、形状或地域气质。
+- **背景**：选择更居家、更轻盈、更现代、甜品店、餐厅或街头氛围；也可以完全交给 Skill 根据菜品判断。
+- **贴纸风格**：默认水彩，可改为原创像素画。
+- **贴纸主体与位置**：多道菜时可以指定最想记录的那一道；位置会避开所有主要菜品。
+- **装饰强度**：保留少量环绕线条，或者要求完全不加装饰。
+- **输出形式**：独立成图、上下对照图，或两者都要。
+
+## 两条不能丢的原则
+
+1. 真实食物永远是主角。菜品的形态、数量、位置和家常痕迹不能为了“更漂亮”而被改写。
+2. 所有新增内容都要服务于这道菜：餐具、背景、灯光、贴纸和线条必须从食物的颜色、质感、结构或用餐语境中推导出来。
+
+## 完整提示词
+
+- 中文版：[references/food-diary-sticker-prompt.zh-CN.md](references/food-diary-sticker-prompt.zh-CN.md)
+- English version: [references/food-diary-sticker-prompt.en.md](references/food-diary-sticker-prompt.en.md)
+
+## 内容结构
+
+```text
+food-diary-sticker-editorial/
+├── README.md
+├── SKILL.md
+├── agents/
+│   └── openai.yaml
+├── references/
+│   ├── background-routing.md
+│   ├── food-diary-sticker-prompt.zh-CN.md
+│   └── food-diary-sticker-prompt.en.md
+├── scripts/
+│   └── compose_food_comparison.py
+└── assets/examples/
+    └── 4 张前后对照示例图
+```
+
+`assets/examples` 只用来说明预期效果。除非用户上传的正是某张示例原图，否则不要把示例中的菜品、餐具、配色或构图复制到新的作品里。

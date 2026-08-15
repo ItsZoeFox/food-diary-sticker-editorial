@@ -1,0 +1,4 @@
+interface:
+  display_name: "Food Diary Sticker Editorial"
+  short_description: "Turn real homemade meals into lively, faithful food diaries"
+  default_prompt: "Use $food-diary-sticker-editorial to preserve this meal exactly as cooked, art-direct its dishware and surroundings, and add one recognizable watercolor sticker."
