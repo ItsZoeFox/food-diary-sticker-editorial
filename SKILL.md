@@ -9,12 +9,12 @@ Create one polished food photograph with one restrained illustrated sticker. The
 
 ## Preflight Defaults
 
-Before editing, ask one concise question unless the user has already answered it: **“是否还需要一张原图在上、处理图在下的前后对照版？”**
+Before editing, ask one concise question unless the user has already answered it: **“是否还需要一张原图与处理图并排展示的前后对照版？”**
 
 - Default deliverable: the processed image only. Create the comparison version only when requested.
 - Default processed-image size: exactly the same pixel dimensions and aspect ratio as the source photograph. Change size or crop only when the user asks. If the generator cannot emit the exact pixel dimensions, request the same aspect ratio and perform one deterministic final resize/crop from the first successful edit; never regenerate merely to change dimensions.
 - Default sticker style: clean watercolor. Use original pixel art only when the user requests it.
-- When a comparison is requested, preserve the source image completely unchanged in the upper panel and place the final processed image in the lower panel. Use equal-width, equal-height panels and a thin neutral divider; add no before/after labels unless requested. The comparison canvas is source width by twice the source height plus the divider. Prefer `scripts/compose_food_comparison.py` for deterministic EXIF-aware sizing and composition.
+- When a comparison is requested, choose its direction from the source orientation: for a portrait source, place the untouched original on the left and the final processed image on the right; for a landscape or square source, place the untouched original above and the final processed image below. Keep both panels at the source dimensions, separate them with a thin neutral divider, and add no labels unless requested. Prefer `scripts/compose_food_comparison.py`, whose `auto` layout applies this EXIF-aware rule. Honor an explicitly requested direction instead.
 
 ## Workflow
 
@@ -112,7 +112,7 @@ Before returning, confirm all of the following:
 - No artistic title, food name, annotation, arrow, logo, or watermark appears unless the user explicitly asks for text.
 - No major dish has been invented, deleted, duplicated, or materially changed.
 - The processed standalone has the source image's exact pixel dimensions unless the user requested another size.
-- If a comparison was requested, the upper panel is the untouched original and the lower panel is the final processed image; neither panel is stretched or mislabeled.
+- If a comparison was requested, a portrait source uses untouched original left and final processed image right; a landscape or square source uses untouched original above and final processed image below. Neither panel is stretched, cropped differently, or mislabeled.
 
 ## Priority Order
 

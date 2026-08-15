@@ -2,7 +2,7 @@
 
 Use the user's original image as the sole source for the real food. Produce one finished editorial food-diary photograph. Default to the source photograph's exact pixel dimensions and aspect ratio. Default to one clean watercolor sticker; use original pixel art only when explicitly requested.
 
-Before editing, ask whether the user also wants a top/bottom comparison image unless they already specified it. The default deliverable is the processed image only. When requested, create the comparison after the edit: untouched original above, final processed image below, equal-size panels, thin neutral divider, and no labels unless requested.
+Before editing, ask whether the user also wants a before/after comparison unless they already specified it. The default deliverable is the processed image only. When requested, choose the comparison direction from the source orientation: for a portrait source, place the untouched original on the left and the final processed image on the right; for a landscape or square source, place the untouched original above and the final processed image below. Keep equal-size source-dimension panels, use a thin neutral divider, and add no labels unless requested. Honor an explicitly requested direction instead.
 
 ## Core Direction
 
