@@ -10,6 +10,10 @@
 
 The repository includes the complete image-editing prompt in both Chinese and English.
 
+## 鸣谢
+本skill受到@AM.photo-abstract-editorial skill的启发。
+感谢对象小毅一直做出颇具钻研精神的美味新菜品，你是这个skill诞生的原因，lovelove❤️
+
 ## 它会做什么
 
 - **食物纪实**：不擅自增减、移动、规整或重新摆盘，保留家里做出来的真实样子，但是会去掉盘边的杂乱酱汁来保持美观。
@@ -37,7 +41,7 @@ The repository includes the complete image-editing prompt in both Chinese and En
 
 ## 使用方法
 
-下载一个Agent软件，codex/claudecode/workbuddy等，作者使用的是codex，不同平台生成效果会不一样。
+下载一个Agent平台软件，codex/claudecode/workbuddy等，本人使用的是codex，不同平台生成效果会不一样。
 
 告诉codex：帮我安装github上的food-diary-sticker-editorial这个skill
 
@@ -76,7 +80,7 @@ Skill 会先询问你是否需要前后对照版。默认设置是：
 - **装饰强度**：保留少量环绕线条，或者要求完全不加装饰。
 - **输出形式**：独立成图、上下对照图，或两者都要。
 
-## 两条不能丢的原则
+## 两条原则
 
 1. 真实食物永远是主角。菜品的形态、数量、位置和家常痕迹不能为了“更漂亮”而被改写。
 2. 所有新增内容都要服务于这道菜：餐具、背景、灯光、贴纸和线条必须从食物的颜色、质感、结构或用餐语境中推导出来。
