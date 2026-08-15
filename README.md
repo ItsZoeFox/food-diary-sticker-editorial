@@ -1,19 +1,21 @@
 # Food Diary Sticker Editorial 🍳
 
-把随手拍下的家常菜，认真地留成一张值得骄傲的美食日记。
+把随手拍下的家常菜，认真地留成一张值得骄傲的美食日记！
 
-这是一个为 Codex 准备的食物图片编辑 Skill。它会保留真实菜品原本的形状、份量、位置、重叠与不完美，只把不合适的拍摄环境重新整理：清掉电脑、包装和桌面杂物，根据菜品选择更协调的餐具、桌面材质、配色与光线，再加上一枚能够概括这道菜特点的水彩或像素贴纸，以及少量从食物中提炼出的环绕线条。
+这是一个食物图片编辑 Skill。它会保留真实菜品原本的形状、份量、位置、重叠，只把不合适的拍摄环境重新整理：清掉电脑、包装和桌面杂物，根据菜品选择更协调的餐具、桌面材质、配色与光线，再加上一枚能够概括这道菜特点的水彩或像素贴纸，以及少量从食物中提炼出的环绕线条。
 
-它不是一键滤镜，也不是把家常菜重画成广告样片。它更像一次温柔的“家庭餐桌美术指导”——即使拍照时光线一般、桌子有点乱、盘子不太搭，也依然能最大限度保留这顿饭真实的样子，同时让它显得更美味、更有趣、更值得记录。
+即使拍照时光线一般、桌子有点乱、盘子不太搭，也依然能最大限度保留这顿饭真实的样子，同时让它显得更美味、更有趣、更值得记录！
+（也适用于在外拍摄的希望美化背景的美食～支持甜品小吃等其他品类）
+希望这个skill可以为你的美食之旅带去更多乐趣！祝你好胃口！Bon appétit 🍳
 
 The repository includes the complete image-editing prompt in both Chinese and English.
 
 ## 它会做什么
 
-- **食物纪实锁**：不擅自增减、移动、规整或重新摆盘，保留家里做出来的真实样子。
-- **按菜选场景**：不再把所有食物都放到木桌和粗麻布上；会在石材、釉面砖、漆面、玻璃、金属、细织物、竹席等背景中做食物导向的选择。
+- **食物纪实**：不擅自增减、移动、规整或重新摆盘，保留家里做出来的真实样子，但是会去掉盘边的杂乱酱汁来保持美观。
+- **按菜选场景**：会在石材、釉面砖、漆面、玻璃、金属、细织物、竹席等背景中做食物导向的选择。
 - **按需更换餐具**：只有用户允许时才换盘、碗或锅，而且是让新餐具围着原菜生成，不让菜迁就盘子。
-- **克制地增加食欲**：统一光向、色温与阴影，轻微提升中间调和色彩，但拒绝 HDR、塑料油光与过度锐化。
+- **增加食欲**：统一光向、色温与阴影，轻微提升中间调和色彩，但拒绝 HDR、塑料油光与过度锐化。
 - **一枚菜品记忆贴纸**：默认使用干净水彩，也可切换为原创像素画；贴纸会突出这道菜最容易被认出的三到五个特征。
 - **可选前后对照图**：适合小红书等平台展示，原图在上、处理图在下，不添加多余标签。
 
@@ -21,7 +23,7 @@ The repository includes the complete image-editing prompt in both Chinese and En
 
 以下原图均为本人拍摄。每张示例均为“原图在上、处理图在下”。
 
-| 番茄鸡肉蛋锅 | 菠萝咕咾肉 |
+| 番茄鸡肉锅 | 菠萝咕咾肉 |
 | --- | --- |
 | ![番茄鸡肉蛋锅前后对照](assets/examples/tomato-chicken-egg-stew-before-after.jpg) | ![菠萝咕咾肉前后对照](assets/examples/pineapple-sweet-sour-meatballs-before-after.jpg) |
 
@@ -29,17 +31,15 @@ The repository includes the complete image-editing prompt in both Chinese and En
 | --- | --- |
 | ![青柠香草烤鱼前后对照](assets/examples/lime-herb-grilled-fish-before-after.jpg) | ![脆皮五花肉前后对照](assets/examples/crispy-pork-belly-platter-before-after.jpg) |
 
-| 丝瓜鸡肉 | 奶油蘑菇鸡 |
+| 瓠子炖鸡 | 奶油蘑菇鸡 |
 | --- | --- |
 | ![丝瓜鸡肉前后对照](assets/examples/loofah-chicken-stew-before-after.jpg) | ![奶油蘑菇鸡前后对照](assets/examples/creamy-mushroom-chicken-before-after.jpg) |
 
 ## 使用方法
 
-将整个 `food-diary-sticker-editorial` 文件夹复制到你的 Codex skills 目录，例如：
+下载一个Agent软件，codex/claudecode/workbuddy等，作者使用的是codex，不同平台生成效果会不一样。
 
-```text
-~/.codex/skills/food-diary-sticker-editorial/
-```
+告诉codex：帮我安装github上的food-diary-sticker-editorial这个skill
 
 也可以直接安装：
 
@@ -105,3 +105,4 @@ food-diary-sticker-editorial/
 ```
 
 `assets/examples` 只用来说明预期效果。除非用户上传的正是某张示例原图，否则不要把示例中的菜品、餐具、配色或构图复制到新的作品里。
+
